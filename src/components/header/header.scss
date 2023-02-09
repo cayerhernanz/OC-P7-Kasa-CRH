@@ -1,0 +1,10 @@
+@import '../../sass/main.scss';
+
+header{
+    @include flex(row, space-between, center);
+    height: 68px;
+    margin: 0 auto auto auto;
+    img{
+        height: 50%;
+    }
+}

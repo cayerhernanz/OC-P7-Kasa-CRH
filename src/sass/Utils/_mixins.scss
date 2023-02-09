@@ -1,0 +1,7 @@
+//Création d'un mixin pour le flexbox
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+  }

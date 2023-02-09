@@ -1,0 +1,18 @@
+@import '../../sass/main.scss';
+
+footer{
+    @include flex(column, center, center);
+    height: 209px;
+    background-color: $color-footer;
+    color: $color-primary;
+    width: 100%;
+    gap: 13%;
+    img{
+        height: 19%;
+        width: 8,5%;
+    }
+    p{
+        font-weight: 500;
+        font-size: 24px;
+    }
+}
