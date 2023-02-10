@@ -3,6 +3,11 @@
 .gallery{
     @include flex(row, space-around, center );
     flex-wrap: wrap;
+    align-content: space-between;
+    row-gap: 6%;
     border-radius: 25px;
     background-color: $color-tertiary;
+    height: 829px;
+    overflow: scroll;
+    padding: 6% 4% 3% 4%;
 }
