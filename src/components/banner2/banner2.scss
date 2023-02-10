@@ -1,0 +1,12 @@
+@import '../../sass/main.scss';
+
+.banner{
+    @include flex(row, center, center);
+    height: 223px;
+    background-image: url('../../assets/banner2-img.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+    margin-bottom: 4%;
+    
+}
