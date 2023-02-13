@@ -1,8 +1,11 @@
 //Importer la feuille de style
 import './header.scss'
 
-//Création d'un prop pour le logo
+//Importer le logo
 import Logo from '../../assets/LOGO.png'
+
+//Importer la barre de navigation
+import Nav from '../nav/nav'
 
 //Code du header
 export default function Header() {
@@ -11,7 +14,7 @@ export default function Header() {
             <h1>
                 <img src={Logo} alt="KASA, logo du site"/>
             </h1>
-            <p>Nav</p>
+            <Nav />
         </header>
     )
 }

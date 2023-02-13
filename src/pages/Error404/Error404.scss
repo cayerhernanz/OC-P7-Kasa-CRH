@@ -18,8 +18,10 @@
         }
         &__link{
             font-size: 18px;
-            text-align: center;
             text-decoration-line: underline;
+            color: $color-secondary;
+            display: flex;
+            justify-content: center;
             &:hover{
                 font-weight: bold;
             }
