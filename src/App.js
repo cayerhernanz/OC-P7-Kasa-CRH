@@ -1,5 +1,9 @@
 //importer React
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
+
+//Importer React Router (fonctions createBrowserRouter, et RouterProvider)
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
 //Importation des différentes pages
 import Home from './pages/Home/Home'
 import Error404 from './pages/Error404/Error404'
@@ -7,6 +11,22 @@ import About from './pages/About/About'
 
 //Importer le webfontloader
 import WebFont from 'webfontloader';
+
+//Création des routes du router
+const router = createBrowserRouter([
+  {
+    path: "/home",
+    element: <Home />
+  },
+  {
+    path: "/about",
+    element: <About />
+  },
+  {
+    path: "/notfound",
+    element: <Error404 />
+  },
+]);
 
 function App() {
   //Récupère la font avant le render de la page
@@ -19,9 +39,7 @@ function App() {
     }, []);
 
   return(
-    //<Home />
-    <About />
-    // <Error404 />
+    <RouterProvider router={router}/>
   )
 }
 
