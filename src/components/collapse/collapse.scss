@@ -1,0 +1,41 @@
+@import '../../sass/main.scss';
+
+.collapse{
+    &_header{
+        height: 52px;
+        background-color: $color-secondary;
+        @include flex(row, space-between, center);
+        border-radius: 5px;
+        h3{
+            color: $color-primary;
+        }
+    }
+    &_content{
+        display: flex;
+        flex-direction: column;
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+        padding: 10px;
+        color: $color-secondary;
+        animation: stretching 0.5s;
+        background-color: $color-tertiary;
+        border-radius: 10px;
+    }
+    &_content_hidden{
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+    }
+}
+
+@keyframes stretching{
+    1%{
+        transform-origin: top;
+        transform: scaleY(0.1);
+    }
+    100%{
+        transform-origin: top;
+        transform: scaleY(1);
+    }
+}
