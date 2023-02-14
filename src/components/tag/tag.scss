@@ -1,0 +1,13 @@
+@import '../../sass/main.scss';
+
+.tag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 115px;
+    height: 25px;
+    border-radius: 10px;
+    color: $color-primary;
+    background-color: $color-secondary;
+    font-size: 14px;
+}

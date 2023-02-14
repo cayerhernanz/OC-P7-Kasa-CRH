@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home/Home'
 import Error404 from './pages/Error404/Error404'
 import About from './pages/About/About'
+import Logement from './pages/Logement/logement';
 
 //Importer le webfontloader
 import WebFont from 'webfontloader';
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
     path: "/notfound",
     element: <Error404 />
   },
+  {
+    path: "/testlogement",
+    element: <Logement />
+  }
 ]);
 
 function App() {
