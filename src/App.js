@@ -28,7 +28,7 @@ const router = createBrowserRouter([
     element: <Error404 />
   },
   {
-    path: "/testlogement",
+    path: "/logement/:id",
     element: <Logement />
   }
 ]);
