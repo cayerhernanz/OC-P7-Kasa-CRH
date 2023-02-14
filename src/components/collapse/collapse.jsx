@@ -8,14 +8,11 @@ import {useState} from 'react';
 //Variables de la fonction pour l'affichage dynamique à aprtir des données des JSON
 export default function Collapse({title, content}){
 
-    //Constante pour déterminer la page actuelle
-    const currentPage = window.location.pathname;
-
     //Constantes toggle pour le hook pour l'ouverture du collapse
     const [toggle, setToggle] = useState(false);
 
     return (
-        <div className={currentPage === '/about' ? 'collapse_about' : 'collapse_logement'}>
+        <div className="collapse">
             <div className='collapse_header' onClick={() => setToggle(!toggle)}>
                 <h3>{title}</h3>
                 <img className={toggle ? 'arrow_up' : 'arrow_down'} src={arrow} alt="icone de flèche"/>

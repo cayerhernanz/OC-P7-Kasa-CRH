@@ -9,6 +9,14 @@
         h3{
             color: $color-primary;
         }
+        .arrow{
+            &_down{
+                transform: rotate(180deg);
+            }
+            &_up{
+              transform: rotate(0deg);  
+            }
+        }
     }
     &_content{
         display: flex;
@@ -26,6 +34,11 @@
         visibility: hidden;
         opacity: 0;
         height: 0;
+        p{
+            visibility: hidden;
+            opacity: hidden;
+            height: 0;
+        }
     }
 }
 

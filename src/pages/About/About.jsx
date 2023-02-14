@@ -16,7 +16,9 @@ export default function About() {
             <main>
                 {aboutData.map(data => {
                     return (
-                        <Collapse title={data.title} content={data.content}/>
+                        <div key={data.id} className="about_collapse">
+                            <Collapse title={data.title} content={data.content}/>
+                        </div>
                     )
                 }
                 )}
