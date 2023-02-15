@@ -8,7 +8,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home/Home'
 import Error404 from './pages/Error404/Error404'
 import About from './pages/About/About'
-import Logement from './pages/Logement/logement';
+import LogementTest from './pages/LogementTest/logementTest';
 
 //Importer le webfontloader
 import WebFont from 'webfontloader';
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/logement/:id",
-    element: <Logement />
+    element: <LogementTest />
   }
 ]);
 
