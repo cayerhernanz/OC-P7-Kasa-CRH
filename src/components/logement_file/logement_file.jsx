@@ -1,10 +1,10 @@
 import './logement_file.scss'
 
 import Collapse from '../collapse/collapse'
+import Tag from '../tag/tag.jsx'
+import HostCard from '../host_card/host_card'
 
-
-export default function LogementFile(array, title, location, equipements, description) {
-    array.map(title, location, description, equipements)
+export default function LogementFile(title, location, equipements, description, tag, index, host) {
     return (
         <main className='logement_file'>
             <div>Carrousel</div>
@@ -14,11 +14,11 @@ export default function LogementFile(array, title, location, equipements, descri
                         <h2>{title}</h2>
                         <h3>{location}</h3>
                         <div className='logement_file_content_head_leftblock_tagcontainer'>
-                            <h4 className='tag'>tags comp</h4>
+                            <Tag tag={tag} index={index}/>
                         </div>
                     </div>
                     <div className='logement_file_content_head_rightblock'>
-                        <p>host comp</p>
+                        <HostCard array={host}/>
                         <p>star rating comp</p>
                     </div>
                 </div>
