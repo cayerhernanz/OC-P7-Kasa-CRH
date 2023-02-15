@@ -10,6 +10,7 @@ export default function gallery(){
            {data.map(data => {
             return (
                 <Card 
+                id={data.id}
                 title={data.title}
                 coverImg={data.cover}
                 />
