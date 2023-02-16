@@ -22,3 +22,14 @@ nav{
         text-decoration: underline solid $color-secondary;
     }
 }
+
+//MQ phone
+@media screen and (max-width: 767px){
+    nav{
+        ul{
+            gap: 10px;
+            font-size: 12px;
+        }
+    }
+
+}
