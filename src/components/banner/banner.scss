@@ -31,3 +31,23 @@
         display: none;
     }
 }
+
+//MQ phone
+@media screen and (max-width: 767px){
+    .banner{
+        height: 120px;
+        &_home{
+            height: 120px;
+            margin-bottom: 1%;
+            p{
+                width: 100%;
+                font-size: 24px;
+                padding: 20% 0 20% 10%;
+            }
+        }
+        &_about{
+            height: 223px;
+
+        }
+    }
+}
