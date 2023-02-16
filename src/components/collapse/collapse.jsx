@@ -14,7 +14,7 @@ export default function Collapse({title, content}){
 
     //Constantes pour le hook localisation
     const [aboutPage, setAboutPage] = useState(false);
-    const location = useLocation()
+    const location = useLocation();
 
     useEffect(() => {
         if(location.pathname ==='/about'){

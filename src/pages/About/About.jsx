@@ -4,7 +4,7 @@ import './about.scss'
 import aboutData from '../../data/data_about.json'
 
 import Header from '../../components/header/header'
-import Banner2 from '../../components/banner2/banner2'
+import Banner from '../../components/banner/banner'
 import Footer from '../../components/footer/footer'
 import Collapse from '../../components/collapse/collapse'
 
@@ -12,7 +12,7 @@ export default function About() {
     return (
         <body className='about'>
             <Header />
-            <Banner2 />
+            <Banner />
             <main>
                 {aboutData.map(data => {
                     return (
