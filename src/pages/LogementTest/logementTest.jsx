@@ -48,7 +48,7 @@ export default function LogementTest(){
                         </div>
                     </div>
                     <div className='logement_file_content_head_rightblock'>
-                        <HostCard array={dataCurrentLogement[0].host} name='name' picture='picture'/>
+                        <HostCard array={dataCurrentLogement[0].host} name={dataCurrentLogement[0].host.name} picture={dataCurrentLogement[0].host.picture}/>
                         <p>star rating comp</p>
                     </div>
                 </div>
