@@ -29,3 +29,26 @@
         }
     }
 }
+
+//MQ phone
+@media screen and (max-width: 767px){
+    .error404{
+        &__main{
+            &__message{
+                padding-top: 5%;  
+                h2{
+                    font-size: 96px;
+                    padding-bottom: 30px;
+                }
+                p{
+                    font-size: 18px;
+                    padding-bottom: 25%;
+                }
+            }
+            &__link{
+                margin: 0;
+                font-size: 14px;
+            }
+        }
+    }
+}
