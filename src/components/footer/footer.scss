@@ -16,3 +16,13 @@ footer{
         font-size: 24px;
     }
 }
+
+//MQ phone
+@media screen and (max-width: 767px){
+    footer{
+        margin-top: 5%;
+        p{
+            font-size: 12px;
+        }
+    }
+}
