@@ -5,9 +5,11 @@ import { Link } from 'react-router-dom'
 
 export default function card({id, title, coverImg}){
     return (
-        <Link to={`/logement/${id}`} className='gallery__card'>
-                <img src={coverImg} alt={title} />
-                <h2>{title}</h2>
+        <Link to={`/logement/${id}`} className='gallery_card'>
+                <img className= "gallery_card_image" src={coverImg} alt={title} />
+                <div className='gallery_card_body'>
+                    <h2>{title}</h2>
+                </div>
         </Link>
     )
 }

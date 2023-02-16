@@ -1,7 +1,6 @@
 @import '../../sass/main.scss';
 
 .error404{
-    height: 1024px;
     background-color: $color-primary;
     &__main{
         color: $color-secondary;
@@ -10,6 +9,7 @@
             h2{
                 font-weight: 700;
                 font-size: 288px;
+                padding-bottom: 30px;
             }
             p{
                 font-size: 36px;
@@ -17,6 +17,7 @@
             }
         }
         &__link{
+            margin: 10% 0 3% 0;
             font-size: 18px;
             text-decoration-line: underline;
             color: $color-secondary;

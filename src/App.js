@@ -24,13 +24,13 @@ const router = createBrowserRouter([
     element: <About />
   },
   {
-    path: "/notfound",
-    element: <Error404 />
-  },
-  {
     path: "/logement/:id",
     element: <LogementTest />
-  }
+  },
+  {
+    path: "*",
+    element: <Error404 />
+  },
 ]);
 
 function App() {
