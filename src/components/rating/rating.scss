@@ -1,0 +1,6 @@
+@import '../../sass/main.scss';
+
+.rating{
+    @include flex(row, flex-start, center);
+    
+}

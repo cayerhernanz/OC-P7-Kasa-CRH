@@ -13,6 +13,7 @@ import Carrousel from '../../components/carrousel/carrousel'
 import Collapse from '../../components/collapse/collapse'
 import Tag from '../../components/tag/tag'
 import HostCard from '../../components/host_card/host_card'
+import Rating from '../../components/rating/rating'
 
 export default function LogementTest(){
 
@@ -49,7 +50,7 @@ export default function LogementTest(){
                     </div>
                     <div className='logement_file_content_head_rightblock'>
                         <HostCard array={dataCurrentLogement[0].host} name={dataCurrentLogement[0].host.name} picture={dataCurrentLogement[0].host.picture}/>
-                        <p>star rating comp</p>
+                        <Rating hostRating={dataCurrentLogement[0].rating}/>
                     </div>
                 </div>
                 <div className='logement_file_content_body'>
