@@ -13,6 +13,11 @@
                 }
                 &_rightblock{
                     width: 50%;
+
+                    &_rating{
+                        @include flex(row, flex-start, center);
+                        flex-wrap: nowrap
+                    }
                 }
             }
             &_body{

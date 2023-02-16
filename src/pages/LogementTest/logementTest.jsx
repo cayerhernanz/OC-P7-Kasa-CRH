@@ -7,6 +7,9 @@ import {useParams} from 'react-router-dom'
 
 import logementData from '../../data/data_logement.json'
 
+import fullStar from '../../assets/rate-star-full.png'
+import emptyStar from '../../assets/rate-star-empty.png'
+
 import Header from '../../components/header/header'
 import Footer from '../../components/footer/footer'
 import Carrousel from '../../components/carrousel/carrousel'
@@ -50,7 +53,16 @@ export default function LogementTest(){
                     </div>
                     <div className='logement_file_content_head_rightblock'>
                         <HostCard array={dataCurrentLogement[0].host} name={dataCurrentLogement[0].host.name} picture={dataCurrentLogement[0].host.picture}/>
-                        <Rating hostRating={dataCurrentLogement[0].rating}/>
+                        {/* <Rating hostRating={dataCurrentLogement[0].rating}/> */}
+                        <div className="logement_file_content_head_rightbloc_rating">
+							{[...Array(5)].map((index) => {
+								const ratingValue = index + 1;
+                                const rating = dataCurrentLogement[0].rating;
+								return (
+									<img key={index} src={ratingValue <= rating ? fullStar: emptyStar} alt="star" />
+								)
+							})}
+						</div>
                     </div>
                 </div>
                 <div className='logement_file_content_body'>
