@@ -2,29 +2,85 @@
 
 .logement{
     &_file{
+        @include flex(column, flex-start, center);
+        width: 100%;
+        padding: 1% 4% 1% 4%;
+
+        &_carrousel{
+            position: relative;
+        display: flex;
+        width: 100%;
+        height: 415px;
+        border-radius: 25px;
+        background-color:black;
+        }
+
         &_content{
-            @include flex(column, space-around, flex-start);
+            padding: 2% 0 2% 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
             color: $color-secondary;
+            
             &_head{
-                @include flex(row, space-between, center);
-                gap: 90%;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                gap: 50%;
+                padding: 2% 0 1% 0;
                 &_leftblock{
-                    width: 50%;
+                    width: 70%;
+                    
+                    h2{
+                        font-size: 36px;
+                    }
+
+                    h3{
+                        font-size: 18px;
+                    }
                 }
-                &_rightblock{
-                    width: 50%;
+                &_rightblock{ 
+                    width: 30%; 
 
                     &_rating{
                         @include flex(row, flex-start, center);
-                        flex-wrap: nowrap
+                        flex-wrap: nowrap;
+                        gap: 5%;
+                        padding-top: 6%;
+                        img{
+                            height: 30px;
+                            width: 30px;
+                        }
                     }
                 }
             }
             &_body{
-                @include flex(row, space-between, center);
-                align-items: center;
+                width: 100%;
+                padding: 4% 0 4% 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
                 gap: 5%;
             }
         }
+    }
+}
+
+.host_card{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 0 10px;  
+    h3{
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+        font-size: 18px;
+    }
+    &_img{
+        width: 64px;
+        height: 64px;
+        border-radius: 100%;
+        background-color: $color-imagebackground;
     }
 }

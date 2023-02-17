@@ -13,7 +13,7 @@ import Carrousel from '../../components/carrousel/carrousel'
 import Collapse from '../../components/collapse/collapse'
 import HostCard from '../../components/host_card/host_card'
 import Tag from '../../components/tag/tag'
-import Rating from '../../components/rating/rating'
+
 
 
 export default function Logement(){
@@ -38,8 +38,8 @@ export default function Logement(){
     <div className='logement'>
         <Header />
         <main className='logement_file'>
-        
-        <div className='logement_file_content'>
+            <div className='logement_file_carrousel'></div>
+            <div className='logement_file_content'>
                 <div className='logement_file_content_head'>
                     <div className='logement_file_content_head_leftblock'>
                         <h2>{currentLogement.title}</h2>
@@ -49,21 +49,33 @@ export default function Logement(){
                         </div>
                     </div>
                     <div className='logement_file_content_head_rightblock'>
-                        <p>host comp</p>
+                        <div className='host_card'>
+                            <h3>
+                                <span>Pepe</span>
+                                <span>Papu</span>
+                            </h3>
+                            <div className='host_card_img'></div>
+                        </div>
                         <div className="logement_file_content_head_rightblock_rating">
-                        {[...Array(5)].map((index) => {
+                            <img src={fullStar} alt="star" className='star' />
+                            <img src={fullStar} alt="star" className='star' />
+                            <img src={fullStar} alt="star" className='star' />
+                            <img src={fullStar} alt="star" className='star' />
+                            <img src={fullStar} alt="star" className='star' />
+                        {/* {[...Array(5)].map((index) => {
 								const ratingValue = index + 1;
                                 const rating = currentLogement.host.rating;
 								return (
 									<img key={index} src={ratingValue <= rating ? fullStar: emptyStar} alt="star" />
 								)
-							})}
+							})} */}
 						</div>
                     </div>
                 </div>
                 <div className='logement_file_content_body'>
                     <Collapse title='Description' content={currentLogement.description} />
-                    {/* <Collapse title='Équipements' content={currentLogement.equipments.map((item, index) => <p key={index}>{item}</p>)} />                                */}
+                    {/* <Collapse title='Équipements' content={currentLogement.equipments.map((item, index) => <p key={index}>{item}</p>)} />*/}
+                    <Collapse title='test' content='test'/>
                 </div>
             </div>
         </main>
