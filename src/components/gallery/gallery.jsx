@@ -13,6 +13,7 @@ export default function gallery(){
                 id={data.id}
                 title={data.title}
                 coverImg={data.cover}
+                key={data.id}
                 />
             )
            })}

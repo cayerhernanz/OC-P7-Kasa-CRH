@@ -10,20 +10,20 @@ import Collapse from '../../components/collapse/collapse'
 
 export default function About() {
     return (
-        <body className='about'>
+        <div className='about'>
             <Header />
             <Banner />
             <main>
                 {aboutData.map(data => {
                     return (
                         <div key={data.id} className="about_collapse">
-                            <Collapse title={data.title} content={data.content}/>
+                            <Collapse title={data.title} content={data.content} />
                         </div>
                     )
                 }
                 )}
             </main>
             <Footer />
-        </body>
+        </div>
     )
 }

@@ -1,6 +1,7 @@
 @import '../../sass/main.scss';
 
 .collapse{
+    padding: 2% 0 2% 0;
     &_header{
         height: 52px;
         background-color: $color-secondary;
@@ -8,6 +9,8 @@
         border-radius: 5px;
         h3{
             color: $color-primary;
+            font-size: 24px;
+            padding-left: 2%;
         }
         .arrow{
             &_down{
@@ -24,34 +27,15 @@
         visibility: visible;
         opacity: 1;
         height: auto;
-        padding: 10px;
+        padding: 2% 2% 2% 2%;
         color: $color-secondary;
-        animation: stretching 0.5s;
         background-color: $color-tertiary;
         border-radius: 10px;
-    }
-    &_content_hidden{
-        visibility: hidden;
-        opacity: 0;
-        height: 0;
         p{
-            visibility: hidden;
-            opacity: hidden;
-            height: 0;
+            font-size: 24px;
         }
     }
     &_logement{
         width: 50%;
-    }
-}
-
-@keyframes stretching{
-    1%{
-        transform-origin: top;
-        transform: scaleY(0.1);
-    }
-    100%{
-        transform-origin: top;
-        transform: scaleY(1);
     }
 }

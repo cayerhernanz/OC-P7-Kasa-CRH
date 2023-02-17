@@ -6,8 +6,7 @@ import arrow from '../../assets/collapse-arrow.png'
 import {useState, useEffect} from 'react';
 import { useLocation } from 'react-router-dom';
 
-//Variables de la fonction pour l'affichage dynamique à aprtir des données des JSON
-export default function Collapse({title, content}){
+export default function Collapse({title, content}) {
 
     //Constantes toggle pour le hook pour l'ouverture du collapse
     const [toggle, setToggle] = useState(false);
@@ -20,22 +19,20 @@ export default function Collapse({title, content}){
         if(location.pathname ==='/about'){
             setAboutPage(true)
         };
-    })
+    } , [])
 
     return (
         <div className={aboutPage ? "collapse" : 'collapse_logement'}>
-            <div className='collapse_header' onClick={() => setToggle(!toggle)}>
-                <h3>{title}</h3>
-                <img className={toggle ? 'arrow_up' : 'arrow_down'} src={arrow} alt="icone de flèche"/>
-            </div>
-            <div className={toggle ? 'collapse_content' : 'collpase_content_hidden'}>
-                {Array.isArray(content) ? content.map((item, index) => { //Récupérer le contenu du tableau de données
-                    return (
-                        <p key={index}>{item}</p>
-                    )
-                }) : content
-                }
-            </div>
+            <details>
+                <summary className='collapse_header' onClick={() => setToggle(!toggle)}>
+                    <h3>{title}</h3>
+                    <img className={toggle ? 'arrow_down' : 'arrow_up'} src={arrow} alt="icone de flèche"/>
+                </summary>
+                <div className='collapse_content'>
+                    <p>{content}</p>
+                </div>
+            </details>
         </div>
     )
+
 }
