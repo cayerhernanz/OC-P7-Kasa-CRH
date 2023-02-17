@@ -11,7 +11,7 @@ import './Error404.scss'
 //Code de la page
 export default function Error404() {
     return (
-        <body className='error404'>
+        <div className='error404'>
             <Header />
             <main className='error404__main'>
                 <section className='error404__main__message'>
@@ -21,6 +21,6 @@ export default function Error404() {
                 <Link to='/home'className='error404__main__link'>Retourner sur la page d’accueil</Link>
             </main>
             <Footer />
-        </body>
+        </div>
     )
 }

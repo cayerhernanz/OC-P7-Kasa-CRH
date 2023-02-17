@@ -5,9 +5,9 @@ import arrowLeft from '../../assets/carrousel-left-arrow.png'
 
 import {useState} from 'react'
 
-export default function Carrousel({imageSlider}){
+export default function Carrousel({images}){
     const [current, setCurrent]= useState(0);
-    const length = imageSlider.length;
+    const length = images.length;
 
     const nextSlide = () => {
         setCurrent(current + 1)
@@ -21,13 +21,13 @@ export default function Carrousel({imageSlider}){
         setCurrent(length - 1)
     }
 
-    if (!Array.isArray(imageSlider) || imageSlider.length <= 0) {
+    if (!Array.isArray(images) || images.length <= 0) {
         return null;
     }
 
     return (
         <section className='carrousel'>
-            <img className='carrousel_image' src={imageSlider[current]} alt="photogrpahie du logement" />
+            <img className='carrousel_image' src={images[current]} alt="photogrpahie du logement" />
             {length > 0 &&
             <>
                 <img

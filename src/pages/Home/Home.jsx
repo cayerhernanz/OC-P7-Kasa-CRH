@@ -7,11 +7,11 @@ import Gallery from '../../components/gallery/gallery'
 //Code de la page
 export default function Home() {
     return (
-        <body className='home'>
+        <div className='home'>
             <Header />
             <Banner />
             <Gallery />
             <Footer />
-        </body>
+        </div>
     )
 }
