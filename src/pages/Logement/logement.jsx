@@ -46,6 +46,9 @@ export default function Logement(){
                         <h3>{currentLogement.location}</h3>
                         <div className='logement_file_content_head_leftblock_tagcontainer'>                            
                             {/* <Tag array={currentLogement.tags} /> */}
+                            <h4 className='tag'>tag</h4>
+                            <h4 className='tag'>tag</h4>
+                            <h4 className='tag'>tag</h4>
                         </div>
                     </div>
                     <div className='logement_file_content_head_rightblock'>
