@@ -46,3 +46,27 @@
         }
     }
 }
+
+//MQ phone
+@media screen and (max-width: 767px){
+    .collapse{
+        &_header{
+            height: 30px;
+            h3{
+                font-size: 13px;
+            }
+        }
+
+        &_content{
+            
+            p{
+                font-size: 12px;
+            }
+        }
+
+        &_logement{
+            width: 100%;
+            height: auto;
+        }
+    }
+}

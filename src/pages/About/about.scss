@@ -6,3 +6,17 @@
         margin-bottom: 5%;
     }
 }
+
+//MQ phone
+
+@media screen and (max-width: 767px){
+    .about{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        main{
+            padding: 5% 4% 30% 4%;
+            margin: 0;    
+        }
+    }
+}

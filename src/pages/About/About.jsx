@@ -15,10 +15,8 @@ export default function About() {
             <Banner />
             <main>
                 {aboutData.map(data => {
-                    return (
-                        <div key={data.id} className="about_collapse">
-                            <Collapse title={data.title} content={data.content} />
-                        </div>
+                    return (   
+                    <Collapse title={data.title} content={data.content} />    
                     )
                 }
                 )}

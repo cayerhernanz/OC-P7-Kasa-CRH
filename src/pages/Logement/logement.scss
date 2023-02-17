@@ -103,3 +103,73 @@
     background-color: $color-secondary;
     font-size: 14px;
 }
+
+//MQ phone
+@media screen and (max-width: 767px){
+    .logement{
+        &_file{
+            padding-bottom: 30%;
+
+            &_carrousel{
+                height: 255px;
+            }
+
+            &_content{
+                &_head{
+                    flex-direction: column;                    
+                    &_leftblock{
+                        width: 100%;
+                        h2{
+                            font-size: 18px;
+                        }
+    
+                        h3{
+                            font-size: 14px;
+                        }
+    
+                        &_tagcontainer{
+                           
+                        }
+                    }
+                    &_rightblock{ 
+                        @include flex(row-reverse, space-between, center);
+                        width: 100%;
+                        padding: 5% 0 5% 0;
+                        &_rating{
+                            padding: 0;
+                            img{
+                                height: 15px;
+                                width: 15px;
+                            }
+                        }
+                    }
+                }
+                &_body{
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 20px;
+
+                }
+            }
+        }
+    }
+
+    .host_card{
+        h3{      
+            font-size: 12px;
+        }
+        &_img{
+            width: 32px;
+            height: 32px;    
+        }
+    }
+
+    .tag{
+        width: 84px;
+        height: 18px;
+        border-radius: 5px;
+        font-size: 10px;
+    }
+}
