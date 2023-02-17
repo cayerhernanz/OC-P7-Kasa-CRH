@@ -173,3 +173,45 @@
         font-size: 10px;
     }
 }
+
+//MQ Tablet
+@media screen and (max-width:1023px){
+    .logement{
+        &_file{
+            &_content{
+                &_head{
+                    gap: 30%;
+                    &_leftblock{
+                        width: 50%;
+                        h2{
+                            font-size: 30px;
+                        }
+                    }
+                &_rightblock{
+                    width: 50%;
+                   @include flex(column, flex-end, center);
+                    &_rating{
+                        img{
+                            height: 20px;
+                            width: 20px;
+                        }
+                    }
+                }
+                }
+                &_body{
+                    height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        gap: 20px;
+                }
+            }
+        }
+    }
+    .host_card{
+        &_img{
+            width: 44px;
+            height: 44px;
+        }
+    }
+}
