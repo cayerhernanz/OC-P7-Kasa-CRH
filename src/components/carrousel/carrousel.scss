@@ -43,13 +43,25 @@
 @media screen and (max-width: 767px){
     .carrousel{
         height: 255px;
+        width: 335px;
+
+        &_image{
+            height: 255px;
+            width: 335px; 
+        }
+
         &_arrow{
-            &_right{  
-                right: 10%;
+            &_right{ 
+                height: 20px;
+                width: 12px;
+                right: 4%;
+                top: 38%;
                 
             }
             &_left{
-                left: 10%; 
+                height: 20px;
+                width: 12px;
+                left: 4%; 
             }
         }
     }

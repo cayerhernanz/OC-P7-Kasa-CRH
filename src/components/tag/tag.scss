@@ -23,12 +23,13 @@
     }
 }
 
-@media screen and (max-width:1023px){
+@media screen and (max-width:1023px) and (min-width: 768px){
     .tag{
         width: auto;
         height: 20px;
         border-radius: 6px;
         font-size: 12px;
+        padding: 4%;
     }
 
 }

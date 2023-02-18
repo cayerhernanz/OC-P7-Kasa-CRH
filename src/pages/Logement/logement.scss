@@ -90,10 +90,6 @@
                         h3{
                             font-size: 14px;
                         }
-    
-                        &_tagcontainer{
-                           
-                        }
                     }
                     &_rightblock{ 
                         @include flex(row-reverse, space-between, center);
@@ -125,7 +121,7 @@
 }
 
 //MQ Tablet
-@media screen and (max-width:1023px){
+@media screen and (max-width:1023px) and (min-width: 768px){
     .logement{
         &_file{
             &_content{

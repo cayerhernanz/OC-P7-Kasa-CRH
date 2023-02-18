@@ -72,7 +72,7 @@
 }
 
 //MQ Tablet
-@media screen and (max-width:1023px){
+@media screen and (max-width:1023px) and (min-width: 768px){
     .collapse{
         &_logement{
             width: 100%;
