@@ -6,15 +6,6 @@
         width: 100%;
         padding: 1% 4% 1% 4%;
 
-        &_carrousel{
-            position: relative;
-        display: flex;
-        width: 100%;
-        height: 415px;
-        border-radius: 25px;
-        background-color:black;
-        }
-
         &_content{
             padding: 2% 0 2% 0;
             width: 100%;
@@ -48,17 +39,6 @@
                 }
                 &_rightblock{ 
                     width: 30%; 
-
-                    &_rating{
-                        @include flex(row, flex-start, center);
-                        flex-wrap: nowrap;
-                        gap: 5%;
-                        padding-top: 10%;
-                        img{
-                            height: 30px;
-                            width: 30px;
-                        }
-                    }
                 }
             }
             &_body{
@@ -110,10 +90,6 @@
         &_file{
             padding-bottom: 30%;
 
-            &_carrousel{
-                height: 255px;
-            }
-
             &_content{
                 &_head{
                     flex-direction: column;                    
@@ -135,13 +111,6 @@
                         @include flex(row-reverse, space-between, center);
                         width: 100%;
                         padding: 5% 0 5% 0;
-                        &_rating{
-                            padding: 0;
-                            img{
-                                height: 15px;
-                                width: 15px;
-                            }
-                        }
                     }
                 }
                 &_body{
@@ -190,12 +159,6 @@
                 &_rightblock{
                     width: 50%;
                    @include flex(column, flex-end, center);
-                    &_rating{
-                        img{
-                            height: 20px;
-                            width: 20px;
-                        }
-                    }
                 }
                 }
                 &_body{

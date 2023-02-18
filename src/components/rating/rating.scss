@@ -1,0 +1,33 @@
+@import '../../sass/main.scss';
+
+.rating{
+    @include flex(row, flex-start, center);
+    flex-wrap: nowrap;
+    gap: 5%;
+    padding-top: 10%;
+    img{
+        height: 30px;
+        width: 30px;
+    }
+}
+
+//MQ phone
+@media screen and (max-width: 767px){
+    .rating{
+        padding: 0;
+        img{
+            height: 15px;
+            width: 15px;
+        }
+    }
+}
+
+//MQ Tablet
+@media screen and (max-width:1023px){
+    .rating{
+        img{
+            height: 20px;
+            width: 20px;
+        }
+    }
+}

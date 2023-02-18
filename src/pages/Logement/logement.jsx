@@ -2,18 +2,14 @@ import './logement.scss'
 import {useEffect, useState} from 'react'
 import {useParams, useNavigate } from 'react-router-dom'
 
-import fullStar from '../../assets/rate-star-full.png'
-import emptyStar from '../../assets/rate-star-empty.png'
-
 import logementData from '../../data/data_logement.json'
 
 import Header from '../../components/header/header'
 import Footer from '../../components/footer/footer'
 import Carrousel from '../../components/carrousel/carrousel'
 import Collapse from '../../components/collapse/collapse'
-import HostCard from '../../components/host_card/host_card'
 import Tag from '../../components/tag/tag'
-
+import Rating from '../../components/rating/rating'
 
 
 export default function Logement(){
@@ -36,6 +32,8 @@ export default function Logement(){
 
     const images = currentLogement && currentLogement.pictures;
     const tags = currentLogement && currentLogement.tags;
+    const hostInfo = currentLogement && currentLogement.host;
+    const hostName = currentLogement && hostInfo.name.split(' ');
     const equipments = currentLogement && currentLogement.equipments;
     const equipmentContent = currentLogement && equipments.map((item, index) => (<span key={index}>{item}<br/></span>));
     
@@ -44,7 +42,6 @@ export default function Logement(){
     <div className='logement'>
         <Header />
         <main className='logement_file'>
-            {/* <div className='logement_file_carrousel'></div> */}
             <Carrousel images={images} />
             <div className='logement_file_content'>
                 <div className='logement_file_content_head'>
@@ -64,32 +61,17 @@ export default function Logement(){
                     <div className='logement_file_content_head_rightblock'>
                         <div className='host_card'>
                             <h3>
-                                <span>Pepe</span>
-                                <span>Papu</span>
+                                <span>{hostName[0]}</span>
+                                <span>{hostName[1]}</span>
                             </h3>
-                            <div className='host_card_img'></div>
+                            <img src={hostInfo.picture} alt="hôte" className='host_card_img'/>
                         </div>
-                        <div className="logement_file_content_head_rightblock_rating">
-                            <img src={fullStar} alt="star" className='star' />
-                            <img src={fullStar} alt="star" className='star' />
-                            <img src={fullStar} alt="star" className='star' />
-                            <img src={fullStar} alt="star" className='star' />
-                            <img src={fullStar} alt="star" className='star' />
-                        {/* {[...Array(5)].map((index) => {
-								const ratingValue = index + 1;
-                                const rating = currentLogement.host.rating;
-								return (
-									<img key={index} src={ratingValue <= rating ? fullStar : emptyStar} alt="star" />
-								)
-							})} */}
-						</div>
+                        <Rating rating={currentLogement.rating}/>
                     </div>
                 </div>
                 <div className='logement_file_content_body'>
                     <Collapse title='Description' content={currentLogement.description} />
-                    {/* <Collapse title='Équipements' content={equipments.map((item, index) => <span key={index}>{item}<br/></span>)} /> */}
                     <Collapse title='Équipements' content={equipmentContent} />
-                    {/* <Collapse title='test' content='test'/> */}
                 </div>
             </div>
         </main>

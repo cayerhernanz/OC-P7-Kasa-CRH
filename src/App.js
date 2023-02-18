@@ -8,7 +8,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home/Home'
 import Error404 from './pages/Error404/Error404'
 import About from './pages/About/About'
-import LogementTest from './pages/LogementTest/logementTest';
 import Logement from './pages/Logement/logement';
 
 //Importer le webfontloader
