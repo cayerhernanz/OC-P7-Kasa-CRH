@@ -72,18 +72,6 @@
     }
 }
 
-.tag{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 115px;
-    height: 25px;
-    border-radius: 10px;
-    color: $color-primary;
-    background-color: $color-secondary;
-    font-size: 14px;
-}
-
 //MQ phone
 @media screen and (max-width: 767px){
     .logement{
@@ -133,13 +121,6 @@
             width: 32px;
             height: 32px;    
         }
-    }
-
-    .tag{
-        width: 84px;
-        height: 18px;
-        border-radius: 5px;
-        font-size: 10px;
     }
 }
 

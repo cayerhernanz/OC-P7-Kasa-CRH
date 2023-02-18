@@ -1,7 +1,7 @@
 import './tag.scss'
 
-export default function Tag(tag){
+export default function Tag(props){
     return (
-        <h4 className='tag' key={tag}>{tag}</h4>
+        <h4 className='tag'>{props.tag}</h4>
     )        
 }
