@@ -24,7 +24,7 @@ export default function Logement(){
     const navigate = useNavigate();
 
     //Récupérer les données du JSON
-    const [currentLogement, setCurrentLogement] = useState('');
+    const [currentLogement, setCurrentLogement] = useState();
 
     useEffect(() => {
         const [importedData] = logementData.filter(data => data.id === idLogement);
@@ -33,19 +33,29 @@ export default function Logement(){
             navigate("/notfound");
         }
     }, []);
-   
+
+    const images = currentLogement && currentLogement.pictures;
+    const tags = currentLogement && currentLogement.tags;
+    const equipments = currentLogement && currentLogement.equipments;
+    const equipmentContent = currentLogement && equipments.map((item, index) => (<span key={index}>{item}<br/></span>));
+    
     return(
+        currentLogement && (
     <div className='logement'>
         <Header />
         <main className='logement_file'>
-            <div className='logement_file_carrousel'></div>
+            {/* <div className='logement_file_carrousel'></div> */}
+            <Carrousel images={images} />
             <div className='logement_file_content'>
                 <div className='logement_file_content_head'>
                     <div className='logement_file_content_head_leftblock'>
                         <h2>{currentLogement.title}</h2>
                         <h3>{currentLogement.location}</h3>
-                        <div className='logement_file_content_head_leftblock_tagcontainer'>                            
-                            {/* <Tag array={currentLogement.tags} /> */}
+                        <div className='logement_file_content_head_leftblock_tagcontainer'>
+                            {/* {tags.map((tag) =>
+                                <Tag key={tag} tag={tag} />
+                            )}                             */}
+                            {/* <Tag array={tagsContent} /> */}
                             <h4 className='tag'>tag</h4>
                             <h4 className='tag'>tag</h4>
                             <h4 className='tag'>tag</h4>
@@ -69,7 +79,7 @@ export default function Logement(){
 								const ratingValue = index + 1;
                                 const rating = currentLogement.host.rating;
 								return (
-									<img key={index} src={ratingValue <= rating ? fullStar: emptyStar} alt="star" />
+									<img key={index} src={ratingValue <= rating ? fullStar : emptyStar} alt="star" />
 								)
 							})} */}
 						</div>
@@ -77,12 +87,14 @@ export default function Logement(){
                 </div>
                 <div className='logement_file_content_body'>
                     <Collapse title='Description' content={currentLogement.description} />
-                    {/* <Collapse title='Équipements' content={currentLogement.equipments.map((item, index) => <p key={index}>{item}</p>)} />*/}
-                    <Collapse title='test' content='test'/>
+                    {/* <Collapse title='Équipements' content={equipments.map((item, index) => <span key={index}>{item}<br/></span>)} /> */}
+                    <Collapse title='Équipements' content={equipmentContent} />
+                    {/* <Collapse title='test' content='test'/> */}
                 </div>
             </div>
         </main>
         <Footer />
     </div>
+    )
     )
 }
