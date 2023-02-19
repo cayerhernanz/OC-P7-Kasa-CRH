@@ -24,8 +24,10 @@ export default function Logement(){
 
     useEffect(() => {
         const [importedData] = logementData.filter(data => data.id === idLogement);
-        setCurrentLogement(importedData);
-        if(currentLogement === null){
+        if(importedData !== undefined){
+            setCurrentLogement(importedData);
+        }
+        else{
             navigate("/notfound");
         }
     }, []);
@@ -52,10 +54,6 @@ export default function Logement(){
                             {tags.map((tag) =>
                                 <Tag key={tag} tag={tag} />
                             )}                            
-                            {/* <Tag array={tagsContent} /> */}
-                            {/* <h4 className='tag'>tag</h4>
-                            <h4 className='tag'>tag</h4>
-                            <h4 className='tag'>tag</h4> */}
                         </div>
                     </div>
                     <div className='logement_file_content_head_rightblock'>
