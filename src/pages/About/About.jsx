@@ -12,7 +12,9 @@ export default function About() {
     return (
         <div className='about'>
             <Header />
+            <div className='banner_container'>
             <Banner />
+            </div>
             <main>
                 {aboutData.map(data => {
                     return (   

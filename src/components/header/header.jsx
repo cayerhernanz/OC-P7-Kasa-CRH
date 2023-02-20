@@ -7,13 +7,15 @@ import Logo from '../../assets/LOGO.png'
 //Importer la barre de navigation
 import Nav from '../nav/nav'
 
+import { Link } from 'react-router-dom'
+
 //Code du header
 export default function Header() {
     return (
         <header>
-            <h1>
+            <Link Link to='/'>
                 <img src={Logo} alt="KASA, logo du site"/>
-            </h1>
+            </Link>
             <Nav />
         </header>
     )

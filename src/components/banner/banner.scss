@@ -12,7 +12,7 @@
         background-size: cover;
         border-radius: 25px;
         @include flex(row, center, center);
-        p{
+        h1{
             color: $color-primary;
             font-size: 48px;
             display: flex;
@@ -32,25 +32,27 @@
     }
 }
 
-//MQ phone
+//MQ phone and tablet
 @media screen and (max-width: 767px){
     .banner{
         display: contents;   
         &_home{
-            width: 335px;
+            display: flex;
+            justify-content: center;
+            width: 90%;
             height: 120px;
             margin: 0 0 2% 4%;
-            p{
+            h1{
                 width: 100%;
                 font-size: 24px;
-                padding: 0 0 0 5%;
+                display: block;
+                text-align: center;
             }
         }
         &_about{
             height: 223px;
-            width: 336px;
-            margin: 1% 4% 2% 4%;
-
+            width: 100%;
+            margin: 1% 0 2% 0;
         }
     }
 }

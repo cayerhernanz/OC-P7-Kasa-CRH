@@ -4,12 +4,12 @@
     @include flex(row, space-around, center );
     flex-wrap: wrap;
     align-content: space-between;
-    row-gap: 6%;
+    row-gap: 10%;
+    column-gap: 2%;
     border-radius: 25px;
     background-color: $color-tertiary;
-    height: 829px;
-    overflow: scroll;
-    padding: 6% 4% 3% 4%;
+    height: auto;
+    padding: 4% 4% 3% 4%;
     margin: 0 4% 0 4%;
 }
 

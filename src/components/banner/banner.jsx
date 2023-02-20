@@ -16,7 +16,7 @@ export default function Banner() {
     return (
         <section className='banner'>
             <div className={aboutPage ? "banner_hidden" : "banner_home"}>
-                <p>Chez vous, partout et ailleurs</p>
+                <h1>Chez vous, partout et ailleurs</h1>
             </div>
 
             <div className={aboutPage ? "banner_about" : "banner_hidden"}>

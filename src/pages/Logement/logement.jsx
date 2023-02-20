@@ -48,8 +48,8 @@ export default function Logement(){
             <div className='logement_file_content'>
                 <div className='logement_file_content_head'>
                     <div className='logement_file_content_head_leftblock'>
-                        <h2>{currentLogement.title}</h2>
-                        <h3>{currentLogement.location}</h3>
+                        <h1>{currentLogement.title}</h1>
+                        <h2>{currentLogement.location}</h2>
                         <div className='logement_file_content_head_leftblock_tagcontainer'>
                             {tags.map((tag) =>
                                 <Tag key={tag} tag={tag} />

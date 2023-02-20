@@ -1,6 +1,9 @@
 @import '../../sass/main.scss';
 
 .about{
+    .banner_container{
+        display: contents;
+    }
     main{
         padding: 0 8% 6% 8%;
         margin-bottom: 5%;
@@ -11,9 +14,16 @@
 
 @media screen and (max-width: 767px){
     .about{
+        height: 100%;
         display: flex;
         flex-direction: column;
         height: 100%;
+        .banner_container{
+            display: flex;
+            justify-content: center;
+            padding: 0 4% 0 4%;
+            margin-bottom: 3%;
+        }
         main{
             padding: 5% 4% 30% 4%;
             margin: 0;    

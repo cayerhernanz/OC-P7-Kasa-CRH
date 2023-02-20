@@ -16,7 +16,7 @@ import WebFont from 'webfontloader';
 //Création des routes du router
 const router = createBrowserRouter([
   {
-    path: "/home",
+    path: "/",
     element: <Home />
   },
   {

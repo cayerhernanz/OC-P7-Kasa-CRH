@@ -5,25 +5,20 @@ header{
     height: 68px;
     padding: 5% 4% 6% 4%;
     img{
-        height: 50%;
+        height: 45%;
     }
 }
 
-//MQ phone
-@media screen and (max-width: 767px){
+//MQ phone et tablet
+@media screen and (max-width: 1024px){
     header{
-        height: 47px;
-        padding-top: 10%;
-        padding-bottom:  8%;
+        height: auto;
+        padding-top: 2%;
+        padding-bottom:  2%;
+        gap: 0;
+        margin-bottom: 2%;
         img{
             height: 40px;
         }
-    }
-}
-
-//MQ tablet
-@media screen and (max-width:1023px){
-    header{
-        padding-top: 8%;
     }
 }

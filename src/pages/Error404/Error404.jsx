@@ -18,7 +18,7 @@ export default function Error404() {
                     <h2>404</h2>
                     <p>Oups! La page que vous demandez n'existe pas.</p>
                 </section>
-                <Link to='/home'className='error404__main__link'>Retourner sur la page d’accueil</Link>
+                <Link to='/' className='error404__main__link'>Retourner sur la page d’accueil</Link>
             </main>
             <Footer />
         </div>

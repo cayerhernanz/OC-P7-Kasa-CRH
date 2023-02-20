@@ -22,11 +22,11 @@
                 &_leftblock{
                     width: 70%;
                     
-                    h2{
+                    h1{
                         font-size: 36px;
                     }
 
-                    h3{
+                    h2{
                         font-size: 18px;
                     }
 
@@ -75,26 +75,26 @@
 //MQ phone
 @media screen and (max-width: 767px){
     .logement{
+        height: auto;
         &_file{
-            padding-bottom: 30%;
-
+            margin-bottom: 4%;
             &_content{
                 &_head{
                     flex-direction: column;                    
                     &_leftblock{
                         width: 100%;
-                        h2{
+                        h1{
                             font-size: 18px;
                         }
     
-                        h3{
+                        h2{
                             font-size: 14px;
                         }
                     }
                     &_rightblock{ 
                         @include flex(row-reverse, space-between, center);
                         width: 100%;
-                        padding: 5% 0 5% 0;
+                        padding: 3% 0 3% 0;
                     }
                 }
                 &_body{
@@ -121,9 +121,10 @@
 }
 
 //MQ Tablet
-@media screen and (max-width:1023px) and (min-width: 768px){
+@media screen and (max-width:1024px) and (min-width: 768px){
     .logement{
         &_file{
+            margin-bottom: 2%;
             &_content{
                 &_head{
                     gap: 30%;
@@ -152,6 +153,17 @@
         &_img{
             width: 44px;
             height: 44px;
+        }
+    }
+}
+
+//Ajustement footer pour res>500px
+@media screen and (max-width:500px){
+    .logement{
+        footer{
+            position: absolute;
+            bottom: 0;
+            margin-top: 0;
         }
     }
 }

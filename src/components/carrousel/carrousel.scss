@@ -10,24 +10,25 @@
     width: 100%;
 
     &_image{
+        width: 100%;
         object-fit: cover;
         border-radius: 25px;
     }
     &_arrow{
-        position: absolute;
-        height: 15%;
-        &:hover{
+
+        &_right{
+            display: flex;
+            position: absolute;
+            top: 44%;
+            right: 3.5%; 
             cursor: pointer;
         }
-        &_right{
-            position: absolute;
-            right: 3%;
-            top: 36%;
-        }
         &_left{
+            display: flex;
             position: absolute;
-            left: 3%;
-            top: 38%;
+            top: 44%;
+            left: 3.5%;
+            cursor: pointer;
         }
     }
     &_slideCount{
@@ -39,29 +40,21 @@
     }
 }
 
-//MQ phone
-@media screen and (max-width: 767px){
+//MQ phone and tablet
+@media screen and (max-width: 1024px){
     .carrousel{
-        height: 255px;
-        width: 335px;
-
-        &_image{
-            height: 255px;
-            width: 335px; 
-        }
+        height: 30%;
+        width: 90%;
 
         &_arrow{
             &_right{ 
-                height: 20px;
-                width: 12px;
-                right: 4%;
-                top: 38%;
+                width: 4%;
+                height: 10%;
                 
             }
             &_left{
-                height: 20px;
-                width: 12px;
-                left: 4%; 
+                width: 4%;
+                height: 10%;  
             }
         }
     }

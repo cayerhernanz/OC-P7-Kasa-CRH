@@ -1,18 +1,15 @@
 @import '../../sass/main.scss';
 
 nav{
-    ul{
-        display: flex;
-        gap: 57px;
-        font-size: 24px;
-        li{
-            a{
-                color: $color-secondary;
-                text-decoration: none;
-                &:hover{
-                font-weight: bold;
-                }
-            }
+    width: auto;
+    @include flex(row, space-between, center);
+    font-size: 24px;
+    gap: 25px;
+    a{
+        color: $color-secondary;
+        text-decoration: none;
+        &:hover{
+        font-weight: bold;
         }
     }
 }
@@ -26,10 +23,21 @@ nav{
 //MQ phone
 @media screen and (max-width: 767px){
     nav{
-        ul{
-            gap: 10px;
+        width: auto;
+        height: auto;
+        gap: 20px;
+        a{
             font-size: 12px;
         }
     }
+}
 
+//MQ Tablet
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    nav{
+        a{
+            font-size: 18px;
+        }
+    }
+    
 }

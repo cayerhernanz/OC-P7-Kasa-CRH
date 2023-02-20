@@ -28,7 +28,7 @@ export default function Carrousel({images}){
     return (
         <section className='carrousel'>
             <img className='carrousel_image' src={images[current]} alt="photogrpahie du logement" />
-            {length > 0 &&
+            {length > 1 &&
             <>
                 <img
                     className='carrousel_arrow_left'
